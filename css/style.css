@@ -48,6 +48,7 @@ button {
 
 .container {
   max-width: 1440px;
+  min-width: 100%;
   padding: 0 20px;
   margin: auto;
   height: 100%;
@@ -79,6 +80,8 @@ nav {
 
 .nav__logo, .footer__logo {
   display: inline-block;
+  position: relative;
+  z-index: 1;
 }
 .nav__logo path{
   fill: var(--color2);
@@ -113,6 +116,8 @@ nav {
   display: flex;
   gap: 20px;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .nav__contact a,
@@ -188,6 +193,7 @@ h1 {
   line-height: 150%;
   font-style: italic;
   color: var(--color2);
+  max-width: 460px;
 }
 
 .header__info a {
@@ -205,6 +211,8 @@ h1 {
 
 .header__foto {
   flex-shrink: 0;
+  max-width: 460px;
+  width: 40%;
 }
 
 /* about */
@@ -236,6 +244,10 @@ h2 {
   padding: 24px 32px;
   box-shadow: 0px 0px 50px var(--colorShadow), 0px 4px 10px rgba(0, 180, 237, 0.1);
   border-radius: 30px;
+}
+.about__foto{
+  max-width: 400px;
+  width: 50%;
 }
 
 /* courses */
