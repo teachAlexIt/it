@@ -8,6 +8,12 @@
   h1 {
     font-size: 4.8em;
   }
+  .benefit__list{
+    gap: 20px;
+  }
+  .benefit__item{
+    max-width: calc(50vw - 30px);
+  }
 }
 
 @media (max-width: 992px) {
@@ -39,15 +45,28 @@
     align-items: flex-start;
     gap: 32px;
   }
+  .benefit__item{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    text-align: center;
+  }
+  .benefit__item img{
+    width: 100%;
+  }
+  .benefit__item br{
+    display: none;
+  }
 }
 
 @media (max-width: 830px) {
-  .courses__list {
+  .courses__list, .method__list {
     gap: 20px;
   }
 
-  .courses__item {
+  .courses__item, .method__item {
     max-width: calc(50vw - 30px);
+    flex-grow: 1;
   }
 }
 
@@ -64,7 +83,7 @@
     padding: 20vh 20vw 0 0;
     justify-content: start;
     z-index: 0;
-    transition: 0.5s;
+    transition: 0.4s;
     z-index: 0;
     transition-timing-function: ease-in-out;
   }
@@ -90,7 +109,7 @@
     position: fixed;
     bottom: 15vh;
     right: -100vw;
-    transition: 0.5s;
+    transition: 0.4s;
     transition-timing-function: ease-in-out;
   }
 
@@ -118,7 +137,7 @@
     height: 2px;
     left: 0;
     background-color: var(--color2);
-    transition: 0.5s;
+    transition: 0.4s;
   }
 
   .hamburger span:nth-child(1) {
@@ -175,17 +194,35 @@
     justify-content: start;
     pointer-events: visible;
   }
+  .courses__list::-webkit-scrollbar {
+    width: 4px;
+    height: 10px;
+    background-color: var(--color1);
+  }
+  
+  .courses__list::-webkit-scrollbar-thumb {
+    background: var(--color3);
+    border-radius: 10px;
+    cursor: pointer;
+  }
 
   .courses__item {
     flex-shrink: 0;
     max-width: 50vw;
+  }
+  .courses{
+    padding-bottom: 30px;
+  }
+  .footer__elements{
+    flex-direction: column;
+    gap: 20px;
   }
 
 }
 
 @media (max-width: 550px) {
  .container{
-  padding: 0 10px;
+  padding: 0 16px;
  }
   h1 {
     font-size: 4em;
@@ -202,19 +239,37 @@
     padding: 16px 12px;
   }
   .courses__list{
-    left: -10px;
-    padding: 50px 10px;
-    gap: 10px;
+    left: -16px;
+    padding: 50px 16px;
+    gap: 14px;
   }
   .courses__item {
     flex-shrink: 0;
     max-width: 85vw;
     gap: 10px;
-    padding: 10px;
+    padding: 12px;
     border-radius: 12px;
   }
   .course-card img {
     max-width: 80px;
+  }
+  .method__list{
+    margin-bottom: 20px;
+  }
+  .method__item{
+    max-width: 100%;
+    border-radius: 12px;
+    padding: 16px 12px;
+  }
+  .method img{
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+  .benefit__item{
+    max-width: 100%;
+    border-radius: 12px;
+    padding: 16px 12px;
   }
 
 }

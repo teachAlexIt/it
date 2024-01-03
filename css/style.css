@@ -600,6 +600,7 @@ footer{
   align-items: center;
   justify-content: center;
   transition: 0.4s;
+  padding: 16px;
 }
 
 .modal-block{
