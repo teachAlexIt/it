@@ -46,9 +46,10 @@ button {
   font-family: 'Rubik', sans-serif;
 }
 
+
 .container {
   max-width: 1440px;
-  min-width: 100%;
+  width: 100%;
   padding: 0 20px;
   margin: auto;
   height: 100%;
@@ -222,7 +223,7 @@ section {
 }
 
 h2 {
-  font-weight: 900;
+  font-weight: 800;
   font-size: 4.6em;
   line-height: 40px;
   color: var(--color2);
