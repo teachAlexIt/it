@@ -18,7 +18,7 @@
 
 @media (max-width: 992px) {
   .nav__links {
-    gap: 40px;
+    gap: 32px;
   }
 
   .header__elements {
@@ -182,10 +182,10 @@
   .about h2 {
     text-align: center;
   }
-  .courses h2{
+  .courses h2, .prices h2{
     margin-bottom: 10px;
   }
-  .courses__list {
+  .courses__list, .prices__list {
     position: relative;
     width: 100vw;
     left: -20px;
@@ -195,13 +195,13 @@
     justify-content: start;
     pointer-events: visible;
   }
-  .courses__list::-webkit-scrollbar {
+  .courses__list::-webkit-scrollbar, .prices__list::-webkit-scrollbar {
     width: 4px;
     height: 10px;
     background-color: var(--color1);
   }
   
-  .courses__list::-webkit-scrollbar-thumb {
+  .courses__list::-webkit-scrollbar-thumb, .prices__list::-webkit-scrollbar-thumb {
     background: var(--color3);
     border-radius: 10px;
     cursor: pointer;
@@ -239,17 +239,21 @@
   .about__elements p {
     padding: 16px 12px;
   }
-  .courses__list{
+  .courses__list, .prices__list{
     left: -16px;
     padding: 50px 16px;
     gap: 14px;
   }
-  .courses__item {
+  .courses__item, .prices__item {
     flex-shrink: 0;
     max-width: 85vw;
     gap: 10px;
     padding: 12px;
     border-radius: 12px;
+  }
+  .prices__item{
+    max-width: 250px;
+    padding: 24px 12px;
   }
   .course-card img {
     max-width: 80px;
