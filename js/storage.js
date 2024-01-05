@@ -10,6 +10,14 @@ const coursesList = [
     courseAge: 'от 7 лет',
   },
   {
+    img: './img/courses/math.svg',
+    courseName: 'Математика',
+
+    courseDescription: 'Ваш ребёнок сможет глубже и подробнее понять изучаемую в школе тему. Я <b>помогу ему выполнить</b> домашнее задание. Объясню сложные моменты просто и интересно. ',
+
+    courseAge: 'от 8 лет',
+  },
+  {
     img: './img/courses/webIllustrator.svg',
     courseName: 'Веб иллюстрации',
 
