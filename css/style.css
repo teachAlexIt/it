@@ -50,6 +50,7 @@ button {
   text-decoration: none;
   display: inline-block;
   font-family: 'Rubik', sans-serif;
+  -webkit-tap-highlight-color: #ffffff00;
 }
 
 
