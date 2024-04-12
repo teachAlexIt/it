@@ -93,7 +93,7 @@ const formContact = document.querySelector('.contact form');
 let chatToken = '';
 document.addEventListener("DOMContentLoaded", function () {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'chatToken.php', true);
+  xhr.open('GET', './js/chatToken.php', true);
   xhr.onload = function () {
     if (xhr.status === 200) {
       var response = xhr.responseText;
