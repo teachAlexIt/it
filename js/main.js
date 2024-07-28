@@ -57,7 +57,7 @@ mainWrapper.onclick = function (e) {
   if (e.target.classList.contains('main-wrapper')) {
     mainWrapper.classList.remove('_show');
     body.classList.remove('_fixid');
-    modalBlock.classList.remove('_show');      
+    modalBlock.classList.remove('_show');
   }
 }
 
@@ -113,10 +113,7 @@ formContact.onsubmit = function () {
     formSubmitBlock.classList.remove('_show');
   }, 3000);
 
-
   const chatId = '396606827';
-
-  console.log(chatToken);
   const Name = formContact.querySelector('#name').value;
   const Tel = formContact.querySelector('#tel').value;
   const messageText = `💥🎉Новая заявка с сайта\n🔘Имя - ${Name}\n🔘Почта - ${Tel}\n🔘Курсы - ${visitCourses}`;
@@ -139,5 +136,56 @@ formContact.onsubmit = function () {
 
 
 
+function coursesListScroll(direction) {
+  const coursesListDiv = document.querySelector('.courses__list');
+  const courseCard = document.querySelector('.course-card');
+  // Получаем текущее значение горизонтальной прокрутки
+  const scrollLeft = coursesListDiv.scrollLeft;
+  const computedStyle = window.getComputedStyle(courseCard);
+  const gap = parseFloat(computedStyle.getPropertyValue('gap'));
+  let newScrollLeft = 0;
+  if (direction == 'next') {
+    
+    newScrollLeft = scrollLeft + courseCard.getBoundingClientRect().width + gap;
+    console.log(courseCard.getBoundingClientRect().width, gap, newScrollLeft);
+  }else{
+    newScrollLeft = scrollLeft - courseCard.getBoundingClientRect().width - gap;
+  }
+  coursesListDiv.scrollTo({
+    left: newScrollLeft,
+    behavior: 'smooth' // Опционально: для плавной анимации прокрутки
+  });
+}
 
+// document.querySelector('.courses__next-button').onclick = function () {
+//   coursesListScroll('next')
+// }
+// document.querySelector('.courses__prev-button').onclick = function () {
+//   coursesListScroll('prev')
+// }
+
+
+
+function onVisit(){
+  const chatId = '396606827';
+  const messageText = `⚡Новый визи на сайт`;
+
+  const url = `https://api.telegram.org/bot${chatToken}/sendMessage`;
+  const params = {
+    chat_id: chatId,
+    text: messageText,
+  };
+  axios.post(url, params)
+    .then(response => {
+
+    })
+    .catch(error => {
+
+    });
+  return false
+}
+
+setTimeout(() => {
+  onVisit()
+}, 1000);
 

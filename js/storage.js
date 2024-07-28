@@ -2,6 +2,14 @@ const coursesListDiv = document.querySelector('.courses__list');
 
 const coursesList = [
   {
+    img: './img/courses/python.png',
+    courseName: 'Python',
+
+    courseDescription: 'Ваш ребёнок научится программировать на языке Python и создавать разнообразные проекты <b>с использованием кода</b>. Для этого ваш ребёнок освоит основы Python, работу с библиотеками, обработку данных и создание графических интерфейсов.',
+
+    courseAge: 'от 7 лет',
+  },
+  {
     img: './img/courses/scratch.svg',
     courseName: 'Scratch',
 
