@@ -528,6 +528,67 @@ h2 {
   flex-shrink: 0;
 }
 
+/* colleagues */
+/* colleagues */
+
+.colleagues h2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.colleagues__list {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.colleagues__item {
+  max-width: 300px;
+  width: 100%;
+  box-shadow: 0px 0px 45px var(--color3), 0px 4px 10px rgba(0, 180, 237, 0.1);
+  border-radius: 20px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: var(--color1);
+  color: var(--color2);
+}
+
+.colleagues__item img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.colleagues__item h3 {
+  font-size: 2em;
+  text-align: center;
+}
+
+.colleagues__item p {
+  font-size: 1.4em;
+  line-height: 150%;
+}
+
+.colleagues__item ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.colleagues__item ul li {
+  font-size: 1.2em;
+  background-color: var(--color3);
+  color: var(--color1);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
 /* prices */
 
 .prices h2 {
