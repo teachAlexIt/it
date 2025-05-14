@@ -113,26 +113,75 @@ formContact.onsubmit = function () {
     formSubmitBlock.classList.remove('_show');
   }, 3000);
 
-  const chatId = '396606827';
+  const chatIdTG = '396606827';
   const Name = formContact.querySelector('#name').value;
   const Tel = formContact.querySelector('#tel').value;
   const messageText = `💥🎉Новая заявка с сайта\n🔘Имя - ${Name}\n🔘Почта - ${Tel}\n🔘Курсы - ${visitCourses}`;
-
-  const url = `https://api.telegram.org/bot${chatToken}/sendMessage`;
-  const params = {
-    chat_id: chatId,
-    text: messageText,
-  };
-  axios.post(url, params)
-    .then(response => {
-
-    })
-    .catch(error => {
-
-    });
-  return false
-
+  sendMessageToTG(messageText, chatIdTG)
 }
+
+// Функция отправки сообшения в TG
+function sendMessageToTG(messageText, chatIdTG) {
+  setTimeout(() => {
+    fetch('https://send-message-to-tg.alekseiteacherit.workers.dev', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        chatId: chatIdTG,
+        messageText: messageText,
+      }),
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.status === 'ok') {
+
+
+        } else {
+          console.log(data);
+
+        }
+      })
+      .catch(error => {
+
+      });
+  }, 1000);
+}
+
+
+async function updateRubPrices() {
+  try {
+    // Получаем XML-курс USD к RUB с сайта ЦБ РФ
+    const response = await fetch('https://www.cbr-xml-daily.ru/daily_json.js');
+    if (!response.ok) throw new Error(`HTTP error: ${response.status}`);
+
+    const data = await response.json();
+    const rate = data.Valute?.USD?.Value;
+    if (typeof rate !== 'number') throw new Error('Неверный формат курса');
+
+    document.querySelectorAll('.cost-item').forEach(item => {
+      const dollarEl = item.querySelector('.cost_dollar');
+      const rubEl = item.querySelector('.cost_rub');
+
+      if (dollarEl && rubEl) {
+        const dollarText = dollarEl.textContent.replace(/[^0-9.]/g, '');
+        const dollarValue = parseFloat(dollarText);
+
+        if (!isNaN(dollarValue)) {
+          const rubValue = Math.round(dollarValue * rate);
+          rubEl.textContent = `${rubValue.toLocaleString('ru-RU')}₽`;
+        }
+      }
+    });
+  } catch (err) {
+    console.error('Ошибка при обновлении стоимости в рублях:', err);
+  }
+}
+
+updateRubPrices();
+
+
 
 
 
@@ -145,10 +194,10 @@ function coursesListScroll(direction) {
   const gap = parseFloat(computedStyle.getPropertyValue('gap'));
   let newScrollLeft = 0;
   if (direction == 'next') {
-    
+
     newScrollLeft = scrollLeft + courseCard.getBoundingClientRect().width + gap;
     console.log(courseCard.getBoundingClientRect().width, gap, newScrollLeft);
-  }else{
+  } else {
     newScrollLeft = scrollLeft - courseCard.getBoundingClientRect().width - gap;
   }
   coursesListDiv.scrollTo({
@@ -163,29 +212,4 @@ function coursesListScroll(direction) {
 // document.querySelector('.courses__prev-button').onclick = function () {
 //   coursesListScroll('prev')
 // }
-
-
-
-function onVisit(){
-  const chatId = '396606827';
-  const messageText = `⚡Новый визи на сайт`;
-
-  const url = `https://api.telegram.org/bot${chatToken}/sendMessage`;
-  const params = {
-    chat_id: chatId,
-    text: messageText,
-  };
-  axios.post(url, params)
-    .then(response => {
-
-    })
-    .catch(error => {
-
-    });
-  return false
-}
-
-setTimeout(() => {
-  onVisit()
-}, 1000);
 

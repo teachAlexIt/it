@@ -8,10 +8,12 @@
   h1 {
     font-size: 4.8em;
   }
-  .benefit__list{
+
+  .benefit__list {
     gap: 20px;
   }
-  .benefit__item{
+
+  .benefit__item {
     max-width: calc(50vw - 30px);
   }
 }
@@ -45,26 +47,32 @@
     align-items: flex-start;
     gap: 32px;
   }
-  .benefit__item{
+
+  .benefit__item {
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
     text-align: center;
   }
-  .benefit__item img{
+
+  .benefit__item img {
     width: 100%;
   }
-  .benefit__item br{
+
+  .benefit__item br {
     display: none;
   }
 }
 
 @media (max-width: 830px) {
-  .courses__list, .method__list {
+
+  .courses__list,
+  .method__list {
     gap: 20px;
   }
 
-  .courses__item, .method__item {
+  .courses__item,
+  .method__item {
     max-width: calc(50vw - 30px);
     flex-grow: 1;
   }
@@ -182,10 +190,14 @@
   .about h2 {
     text-align: center;
   }
-  .courses h2, .prices h2{
+
+  .courses h2,
+  .prices h2 {
     margin-bottom: 10px;
   }
-  .courses__list, .prices__list {
+
+  .courses__list,
+  .prices__list {
     position: relative;
     width: 100vw;
     left: -20px;
@@ -195,13 +207,16 @@
     justify-content: start;
     pointer-events: visible;
   }
-  .courses__list::-webkit-scrollbar, .prices__list::-webkit-scrollbar {
+
+  .courses__list::-webkit-scrollbar,
+  .prices__list::-webkit-scrollbar {
     width: 4px;
     height: 10px;
     background-color: var(--color1);
   }
-  
-  .courses__list::-webkit-scrollbar-thumb, .prices__list::-webkit-scrollbar-thumb {
+
+  .courses__list::-webkit-scrollbar-thumb,
+  .prices__list::-webkit-scrollbar-thumb {
     background: var(--color3);
     border-radius: 10px;
     cursor: pointer;
@@ -211,10 +226,12 @@
     flex-shrink: 0;
     max-width: 50vw;
   }
-  .courses{
+
+  .courses {
     padding-bottom: 30px;
   }
-  .footer__elements{
+
+  .footer__elements {
     flex-direction: column;
     gap: 20px;
   }
@@ -235,7 +252,7 @@
     height: 10px;
     background-color: var(--color1);
   }
-  
+
   .colleagues__list::-webkit-scrollbar-thumb {
     background: var(--color3);
     border-radius: 10px;
@@ -249,9 +266,10 @@
 }
 
 @media (max-width: 550px) {
- .container{
-  padding: 0 16px;
- }
+  .container {
+    padding: 0 16px;
+  }
+
   h1 {
     font-size: 4em;
   }
@@ -259,46 +277,53 @@
   .header__info a {
     width: 80%;
   }
-  .about__elements p{
+
+  .about__elements p {
     border-radius: 10px;
   }
 
   .about__elements p {
     padding: 16px 12px;
   }
-  .courses__list, .prices__list{
+
+  .courses__list,
+  .prices__list {
     left: -16px;
     padding: 50px 16px;
     gap: 14px;
   }
-  .courses__item, .prices__item {
+
+  .courses__item,
+  .prices__item {
     flex-shrink: 0;
     max-width: 85vw;
     gap: 10px;
     padding: 12px;
     border-radius: 12px;
   }
-  .prices__item{
+
+  .prices__item {
     max-width: 250px;
     padding: 24px 12px;
   }
-  .course-card img {
-    max-width: 80px;
-  }
-  .method__list{
+
+  .method__list {
     margin-bottom: 20px;
   }
-  .method__item{
+
+  .method__item {
     max-width: 100%;
     border-radius: 12px;
     padding: 16px 12px;
   }
-  .method img{
+
+  .method img {
     width: 100%;
     max-width: 100%;
     border-radius: 12px;
   }
-  .benefit__item{
+
+  .benefit__item {
     max-width: 100%;
     border-radius: 12px;
     padding: 16px 12px;
@@ -316,9 +341,11 @@
     padding: 30px 20px;
     border-radius: 12px;
   }
-  .colleagues__item img{
+
+  .colleagues__item img {
     width: 100%;
     margin: 0 auto;
+  }
 }
 
 @media (max-width: 460px) {

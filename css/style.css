@@ -358,9 +358,9 @@ h2 {
 }
 
 .course-card img {
-  width: 100%;
-  max-width: 100px;
+  height: 100px;
   align-self: center;
+  border-radius: 6px;
 }
 
 .course-card h3 {
@@ -664,6 +664,16 @@ h2 {
   max-width: max-content;
   margin: 0 auto;
 }
+
+.cost-item{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* .cost-number{
+  align-self: flex-end;
+} */
 
 
 /* contact */
