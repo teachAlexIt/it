@@ -61,9 +61,8 @@ const coursesList = [
     img: './img/courses/math.svg',
     courseName: 'Математика',
 
-    // courseDescription: 'Ваш ребёнок сможет глубже и подробнее понять изучаемую в школе тему. Я <b>помогу ему выполнить</b> домашнее задание. Объясню сложные моменты просто и интересно. ',
-    courseDescription: '<b>Акция!</b> Во время летних каникул мы <b>повторим пройденный за год материал</b> и <b>рассмотрим, что ждет в новом учебном году</b>. Легкие занятия в непринужденной обстановке добавят вашему ребенку <b>уверенности в ном учебном году</b>!<br> <b>Стоимость одного занятия — 1000 ₽.</b>'
-,
+    courseDescription: 'Ваш ребёнок сможет глубже и подробнее понять изучаемую в школе тему. Я <b>помогу ему выполнить</b> домашнее задание. Объясню сложные моменты просто и интересно. ',
+    //courseDescription: '<b>Акция!</b> Во время летних каникул мы <b>повторим пройденный за год материал</b> и <b>рассмотрим, что ждет в новом учебном году</b>. Легкие занятия в непринужденной обстановке добавят вашему ребенку <b>уверенности в ном учебном году</b>!<br> <b>Стоимость одного занятия — 1000 ₽.</b>'
 
 
     courseAge: 'от 7 лет',
@@ -159,10 +158,10 @@ function displayElements(storeList, listDiv) {
       const itemDiv = createCourseCard(item, 'Новинка');
       listDiv.appendChild(itemDiv);
     }
-    else if (item.courseName == 'Математика'){
-      const itemDiv = createCourseCard(item, 'Акция');
-      listDiv.appendChild(itemDiv);
-    }
+    // else if (item.courseName == 'Математика'){
+    //   const itemDiv = createCourseCard(item, 'Акция');
+    //   listDiv.appendChild(itemDiv);
+    // }
     else{
       const itemDiv = createCourseCard(item, '');
       listDiv.appendChild(itemDiv);
