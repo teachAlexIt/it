@@ -62,8 +62,10 @@ const coursesList = [
     courseName: 'Математика',
 
     courseDescription: 'Ваш ребёнок сможет глубже и подробнее понять изучаемую в школе тему. Я <b>помогу ему выполнить</b> домашнее задание. Объясню сложные моменты просто и интересно. ',
+    //courseDescription: '<b>Акция!</b> Во время летних каникул мы <b>повторим пройденный за год материал</b> и <b>рассмотрим, что ждет в новом учебном году</b>. Легкие занятия в непринужденной обстановке добавят вашему ребенку <b>уверенности в ном учебном году</b>!<br> <b>Стоимость одного занятия — 1000 ₽.</b>'
 
-    courseAge: 'от 8 лет',
+
+    courseAge: 'от 7 лет',
   },
   {
     img: './img/courses/webIllustrator.svg',
@@ -125,11 +127,15 @@ const coursesList = [
 ];
 
 
-function createCourseCard(course) {
+function createCourseCard(course, text) {
   const card = document.createElement('div');
   card.className = 'courses__item course-card';
 
   card.innerHTML = `
+    ${text ? `<div class='course-card__new-course'>
+      <i class="fa-solid fa-certificate"></i>
+      <p>${text}</p>
+    </div>` : ""}
     <div class='course-card__description'>
       <img src="${course.img}" alt="">
       <h3>${course.courseName}</h3>
@@ -148,8 +154,20 @@ function createCourseCard(course) {
 
 function displayElements(storeList, listDiv) {
   storeList.forEach(item => {
-    const itemDiv = createCourseCard(item);
-    listDiv.appendChild(itemDiv);
+    if (item.courseName == 'Кибербезопасность' || item.courseName == 'Промт-инжиниринг'){
+      const itemDiv = createCourseCard(item, 'Новинка');
+      listDiv.appendChild(itemDiv);
+    }
+    // else if (item.courseName == 'Математика'){
+    //   const itemDiv = createCourseCard(item, 'Акция');
+    //   listDiv.appendChild(itemDiv);
+    // }
+    else{
+      const itemDiv = createCourseCard(item, '');
+      listDiv.appendChild(itemDiv);
+    }
+    
+    
   });
 }
 

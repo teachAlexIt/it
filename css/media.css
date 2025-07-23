@@ -261,7 +261,6 @@
 
   .colleagues__item {
     flex-shrink: 0;
-    max-width: 50vw;
   }
 }
 
@@ -336,7 +335,10 @@
   }
 
   .colleagues__item {
+<<<<<<< HEAD
     max-width: calc(100vw - 48px);
+=======
+>>>>>>> 37bdcf9e5a00b26989a74f46bed3014e86a56560
     gap: 10px;
     padding: 30px 20px;
     border-radius: 12px;
