@@ -11,9 +11,6 @@ const colleagues = [
     desc: 'Специалист по разработке мобильных приложений для iOS. ',
     subjects: ['Python', 'Кибербезопасность', 'Промт-инжиниринг']
   },
-<<<<<<< HEAD
-
-=======
   // {
   //   name: 'Анна Сидорова',
   //   img: './img/colleague2.jpg',
@@ -26,7 +23,6 @@ const colleagues = [
   //   desc: 'Эксперт по мобильной разработке и кибербезопасности',
   //   subjects: ['Android', 'iOS', 'Кибербезопасность']
   // }
->>>>>>> 37bdcf9e5a00b26989a74f46bed3014e86a56560
 ];
 
 function renderColleagues(list) {
