@@ -121,10 +121,12 @@ formContact.onsubmit = function () {
 }
 
 
+// main.js
+
 // Функция отправки сообшения в TG
 function sendMessageToTG(messageText, chatIdTG) {
   setTimeout(() => {
-    fetch('https://send-message-to-tg.alekseiteacherit.workers.dev', {
+    fetch('https://functions.yandexcloud.net/d4ef9mo2e6smpi7jee8c', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -149,6 +151,8 @@ function sendMessageToTG(messageText, chatIdTG) {
       });
   }, 1000);
 }
+
+
 
 
 async function updateRubPrices() {
