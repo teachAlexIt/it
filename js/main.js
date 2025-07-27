@@ -120,6 +120,7 @@ formContact.onsubmit = function () {
   sendMessageToTG(messageText, chatIdTG)
 }
 
+
 // Функция отправки сообшения в TG
 function sendMessageToTG(messageText, chatIdTG) {
   setTimeout(() => {
